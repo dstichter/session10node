@@ -1,4 +1,4 @@
-module.exports = function() {
+exports.addition = function() {
   var sum = 0;
   var parameters = arguments[0];
 
@@ -7,4 +7,7 @@ module.exports = function() {
   }
   
   return sum;  
+}
+exports.additionBonus = function(x, y) {
+  return (parseFloat(x) + parseFloat(y));
 }

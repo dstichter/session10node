@@ -1,5 +1,7 @@
 var addition = require("./addition.js");
 var subtract = require("./subtract.js");
+var multiply = require("./multiply.js");
+var divide = require("./divide.js");
 
 var params = process.argv.slice(3);
 var result;
@@ -7,17 +9,29 @@ var result;
 switch(process.argv[2]) {
   case "add":
   case "plus":
-    result = addition(params);
+    result = addition.addition(params);
     break;
 
   case "sub":
   case "minus":
   case "subtract":
-    result = subtract.doIt(params);
+    result = subtract.subtract(params);
+    break;
+
+  case "multiply":
+  case "times":
+  case "x":
+    result = multiply.mul(params);
+    break;
+
+  case "divide":
+  case "div":
+  case "/":
+    result = divide.div(params);
     break;
 
   default:
-    result = subtract.dontDoIt();
+    console.log(result);
 
 }
 console.log(result);

@@ -1,4 +1,4 @@
-exports.doIt = function() {
+exports.subtract = function() {
   var parameters = arguments[0];
 
   var result = parseFloat(parameters[0]);
@@ -9,7 +9,6 @@ exports.doIt = function() {
 
   return result;
 }
-
-exports.dontDoIt = function() {
-  return false;
+exports.subtractBonus = function(x, y) {
+  return (parseFloat(x) - parseFloat(y));
 }

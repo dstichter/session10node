@@ -1,6 +1,10 @@
-var sum = 0;
+module.exports = function() {
+  var sum = 0;
+  var parameters = arguments[0];
 
-for(var i=2; i<process.argv.length; i++){
-  sum += parseFloat(process.argv[i]);
+  for(var i = 0; i < parameters.length; i++){
+    sum += parseFloat(parameters[i]);
+  }
+  
+  return sum;  
 }
-console.log(sum);

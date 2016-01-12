@@ -1,9 +1,15 @@
-var cmdArguments = process.argv;
+exports.doIt = function() {
+  var parameters = arguments[0];
 
-result = parseFloat(cmdArguments[2]);
+  var result = parseFloat(parameters[0]);
 
-for(var i = 3; i < cmdArguments.length; i++) {
-  result -= cmdArguments[i];
+  for(var i = 1; i < parameters.length; i++) {
+    result -= parameters[i];
+  }
+
+  return result;
 }
 
-console.log(result);
+exports.dontDoIt = function() {
+  return false;
+}
